@@ -24,6 +24,13 @@ members = [
 [lib]
 doc-scrape-examples = false
 
+[features]
+rustc-dep-of-std = ["core", "compiler_builtins"]
+
+[dependencies]
+core = { package = "rustc-std-workspace-core", version = "1", optional = true }
+compiler_builtins = { version = "0.1", optional = true }
+
 [dev-dependencies]
 macrotest = "1.0.9"
 rustversion = "1"
